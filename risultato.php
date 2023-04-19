@@ -3,7 +3,7 @@
     $word = $_GET['word'];
 
     $paragrafo = 'Il testo scritto è: ' . "'" . $text . "'" . ' ed ha una lunghezza di ' . strlen($text) . ' caratteri';
-    $paragrafoCensurato = 'Paragrafo censurato: ' . "'" . str_replace($word, '***', $text) . "'";
+    $paragrafoCensurato = 'Paragrafo censurato: ' . "'" . str_ireplace($word, '***', $text) . "'";
 ?>
 
 <!DOCTYPE html>
@@ -16,10 +16,10 @@
 </head>
 <body>
     <h1>
-        <?php echo $paragrafo ?>
+        <?php echo $paragrafo; ?>
     </h1>
     <h1>
-        <?php echo $paragrafoCensurato ?>
+        <?php echo $paragrafoCensurato; ?>
     </h1>
 </body>
 </html>
